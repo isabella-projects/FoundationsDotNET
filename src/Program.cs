@@ -17,6 +17,12 @@
 
             Iterations.LoopPeople();
             Iterations.ChallengeFizzBuzz();
+            Iterations.LoopRandom();
+            Iterations.ChallengeGameBattle();
+            Iterations.UserInput();
+            Iterations.ValidateIntegerInput();
+            Iterations.ValidateStringInput();
+            Iterations.ProcessStringArrContent();
         }
     }
 }
