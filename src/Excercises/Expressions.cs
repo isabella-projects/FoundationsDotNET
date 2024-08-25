@@ -1,7 +1,6 @@
-using LearnCSharp.Helpers;
-
 namespace LearnCSharp.Excercises
 {
+    using Helpers;
     public class Expressions
     {
         public static void FlipCoin()
