@@ -10,6 +10,10 @@
             Expressions.Permissions();
 
             CodeBlocks.Flags();
+
+            SwitchStatement.EmployeeLevel();
+            SwitchStatement.ChallengeSwitch();
+            SwitchStatement.ChallengeExpression();
         }
     }
 }
