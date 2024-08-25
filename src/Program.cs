@@ -14,6 +14,9 @@
             SwitchStatement.EmployeeLevel();
             SwitchStatement.ChallengeSwitch();
             SwitchStatement.ChallengeExpression();
+
+            Iterations.LoopPeople();
+            Iterations.ChallengeFizzBuzz();
         }
     }
 }
