@@ -69,6 +69,12 @@
                 Formatting.NumberFormatting();
                 Formatting.StringInterpolation();
                 Formatting.ChallengeStrInterpolation();
+
+                HelperMethods.IndexOfMethod();
+                HelperMethods.LastIndexOf();
+                HelperMethods.IndexOfAny();
+                HelperMethods.Updating();
+                HelperMethods.ChallengeUpdateData();
             }
         }
     }
