@@ -44,6 +44,8 @@
                 GuidedProjects.JaggedArray();
                 GuidedProjects.AnimalSpecies();
                 GuidedProjects.AnimalSpeciesChallenge();
+                GuidedProjects.AnimalSpeciesChallenge2();
+                GuidedProjects.AnimalSpeciesChallenge3(true);
             }
 
             if (args.Contains("DataTypes"))
