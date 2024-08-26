@@ -4,25 +4,42 @@
 
     public class Program
     {
-        public static void Main()
+        // Set method param on true where it's applicable to run the method if needed
+        public static void Main(string[] args)
         {
-            Expressions.FlipCoin();
-            Expressions.Permissions();
+            if (args.Contains("Expressions"))
+            {
+                Expressions.FlipCoin();
+                Expressions.Permissions();
+            }
 
-            CodeBlocks.Flags();
+            if (args.Contains("Codeblocks"))
+                CodeBlocks.Flags();
 
-            SwitchStatement.EmployeeLevel();
-            SwitchStatement.ChallengeSwitch();
-            SwitchStatement.ChallengeExpression();
+            if (args.Contains("SwitchStatement"))
+            {
+                SwitchStatement.EmployeeLevel();
+                SwitchStatement.ChallengeSwitch();
+                SwitchStatement.ChallengeExpression();
+            }
 
-            Iterations.LoopPeople();
-            Iterations.ChallengeFizzBuzz();
-            Iterations.LoopRandom();
-            Iterations.ChallengeGameBattle();
-            Iterations.UserInput();
-            Iterations.ValidateIntegerInput();
-            Iterations.ValidateStringInput();
-            Iterations.ProcessStringArrContent();
+            if (args.Contains("Iterations"))
+            {
+                Iterations.LoopPeople();
+                Iterations.ChallengeFizzBuzz();
+                Iterations.LoopRandom();
+                Iterations.ChallengeGameBattle();
+                Iterations.UserInput();
+                Iterations.ValidateIntegerInput();
+                Iterations.ValidateStringInput();
+                Iterations.ProcessStringArrContent();
+            }
+
+            if (args.Contains("GuidedProjects"))
+            {
+                GuidedProjects.JaggedArray(false);
+                GuidedProjects.AnimalSpecies(false);
+            }
         }
     }
 }
