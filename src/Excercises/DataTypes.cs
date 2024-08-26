@@ -352,4 +352,128 @@ namespace LearnCSharp.Excercises
             }
         }
     }
+
+    public class Formatting
+    {
+        public static void CompositeFormatting(bool execute = false)
+        {
+            if (!execute)
+                return;
+
+            string first = "Hello";
+            string second = "World";
+            string result = string.Format("{0} {1}!", first, second);
+            string otherResult = string.Format("{0} {0} {0}!", first, second);
+            Helper.Output(result);
+            Helper.Output(otherResult);
+        }
+
+        public static void FormatCurrency(bool execute = false)
+        {
+            if (!execute)
+                return;
+
+            decimal price = 123.45m;
+            int discount = 50;
+            Helper.Output($"Price: {price:C} (Save {discount:C})");
+        }
+
+        public static void NumberFormatting(bool execute = false)
+        {
+            if (!execute)
+                return;
+
+            decimal measurement = 123456.78912m;
+            Helper.Output($"Measurement: {measurement:N4} units");
+
+            Helper.BREAK();
+
+            decimal tax = .36785m;
+            Helper.Output($"Tax rate: {tax:P2}");
+
+            Helper.BREAK();
+
+            decimal price = 67.55m;
+            decimal salePrice = 59.99m;
+
+            string yourDiscount = string.Format("You saved {0:C2} off the regular {1:C2} price. ", price - salePrice, price);
+
+            yourDiscount += $"A discount of {(price - salePrice) / price:P2}!"; //inserted
+            Helper.Output(yourDiscount);
+        }
+
+        public static void StringInterpolation(bool execute = false)
+        {
+            if (!execute)
+                return;
+
+            int invoiceNumber = 1201;
+            decimal productShares = 25.4568m;
+            decimal subtotal = 2750.00m;
+            decimal taxPercentage = .15825m;
+            decimal total = 3185.19m;
+
+            Helper.Output($"Invoice Number: {invoiceNumber}");
+            Helper.Output($"   Shares: {productShares:N3} Product");
+            Helper.Output($"     Sub Total: {subtotal:C}");
+            Helper.Output($"           Tax: {taxPercentage:P2}");
+            Helper.Output($"     Total Billed: {total:C}");
+
+            Helper.BREAK();
+
+            string input = "Pad this";
+            Console.WriteLine(input.PadLeft(12, '-'));
+            Console.WriteLine(input.PadRight(12, '-'));
+
+            Helper.BREAK();
+
+            string paymentId = "769C";
+            string payeeName = "Mr. Stephen Ortega";
+            string paymentAmount = "$5,000.00";
+
+            var formattedLine = paymentId.PadRight(6);
+            formattedLine += payeeName.PadRight(24);
+            formattedLine += paymentAmount.PadLeft(10);
+
+            Helper.Output("1234567890123456789012345678901234567890");
+            Helper.Output(formattedLine);
+        }
+
+        public static void ChallengeStrInterpolation(bool execute = false)
+        {
+            if (!execute)
+                return;
+
+            string customerName = "Ms. Barros";
+
+            string currentProduct = "Magic Yield";
+            int currentShares = 2975000;
+            decimal currentReturn = 0.1275m;
+            decimal currentProfit = 55000000.0m;
+
+            string newProduct = "Glorious Future";
+            decimal newReturn = 0.13125m;
+            decimal newProfit = 63000000.0m;
+
+            Console.WriteLine($"Dear {customerName},\nAs a customer of our {currentProduct} offering we are excited to tell you about new financial product that would dramatically increase your return.");
+            Helper.BREAK();
+            Console.WriteLine($"Currently, you own {currentShares:N2} shares at a return of {currentReturn:P2}.");
+            Console.WriteLine($"Our new product, {newProduct} offers a return of {newReturn:P}.  Given your current volume, your potential profit would be {newProfit:C}.\n");
+
+            Console.WriteLine("Here's a quick comparison:\n");
+
+            string comparisonMessage = "";
+
+            comparisonMessage = currentProduct.PadRight(20);
+            comparisonMessage += string.Format("{0:P}", currentReturn).PadRight(10);
+            comparisonMessage += string.Format("{0:C}", currentProfit).PadRight(20);
+
+            comparisonMessage += "\n";
+            comparisonMessage += newProduct.PadRight(20);
+            comparisonMessage += string.Format("{0:P}", newReturn).PadRight(10);
+            comparisonMessage += string.Format("{0:C}", newProfit).PadRight(20);
+
+            Console.WriteLine(comparisonMessage);
+        }
+    }
 }

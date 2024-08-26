@@ -63,6 +63,12 @@
                 ArrayOperations.Splitting();
                 ArrayOperations.ChallengeReverseWords();
                 ArrayOperations.ChallengeParseStrOfOrders();
+
+                Formatting.CompositeFormatting();
+                Formatting.FormatCurrency();
+                Formatting.NumberFormatting();
+                Formatting.StringInterpolation();
+                Formatting.ChallengeStrInterpolation();
             }
         }
     }
