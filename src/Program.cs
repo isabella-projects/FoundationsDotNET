@@ -4,7 +4,11 @@
 
     public class Program
     {
-        // Set method param on true where it's applicable to run the method if needed
+        /**
+        * All Methods are disabled by default
+        * To turn and check the method's execution
+        * pass 'true' to the method.
+        */
         public static void Main(string[] args)
         {
             if (args.Contains("Expressions"))
@@ -39,7 +43,26 @@
             {
                 GuidedProjects.JaggedArray();
                 GuidedProjects.AnimalSpecies();
-                GuidedProjects.AnimalSpeciesChallenge(true);
+                GuidedProjects.AnimalSpeciesChallenge();
+            }
+
+            if (args.Contains("DataTypes"))
+            {
+                DataTypes.SignedAndUnsignedITypes();
+                DataTypes.FloatingTypes();
+                DataTypes.ReferenceTypes();
+                DataTypes.DataTypeConversion();
+                DataTypes.TryParseMethod(false, "appropriate");
+                DataTypes.ChallengeCombineValues();
+                DataTypes.ChallengeMathOpNumTypes();
+
+                ArrayOperations.Sorting();
+                ArrayOperations.Resizing();
+                ArrayOperations.CharArrays();
+                ArrayOperations.Joining();
+                ArrayOperations.Splitting();
+                ArrayOperations.ChallengeReverseWords();
+                ArrayOperations.ChallengeParseStrOfOrders();
             }
         }
     }
