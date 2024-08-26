@@ -4,8 +4,11 @@ namespace LearnCSharp.Excercises
 
     public class SwitchStatement
     {
-        public static void EmployeeLevel()
+        public static void EmployeeLevel(bool execute = false)
         {
+            if (!execute)
+                return;
+
             int employeeLevel = 100;
             string employeeName = "John Smith";
 
@@ -31,8 +34,11 @@ namespace LearnCSharp.Excercises
             Helper.Output($"{employeeName}, {title}");
         }
 
-        public static void ChallengeSwitch()
+        public static void ChallengeSwitch(bool execute = false)
         {
+            if (!execute)
+                return;
+
             // SKU = Stock Keeping Unit
             string sku = "01-MN-L";
 
@@ -91,8 +97,11 @@ namespace LearnCSharp.Excercises
             Helper.Output($"Product: {size} {color} {type}");
         }
 
-        public static void ChallengeExpression()
+        public static void ChallengeExpression(bool execute = false)
         {
+            if (!execute)
+                return;
+
             // SKU = Stock Keeping Unit
             string sku = "01-MN-L";
 

@@ -4,8 +4,11 @@ namespace LearnCSharp.Excercises
 {
     public class Iterations
     {
-        public static void LoopPeople()
+        public static void LoopPeople(bool execute = false)
         {
+            if (!execute)
+                return;
+
             string[] names = ["Alex", "Eddie", "David", "Michael"];
 
             for (int i = 0; i < names.Length; i++)
@@ -22,8 +25,11 @@ namespace LearnCSharp.Excercises
             }
         }
 
-        public static void ChallengeFizzBuzz()
+        public static void ChallengeFizzBuzz(bool execute = false)
         {
+            if (!execute)
+                return;
+
             for (int i = 1; i <= 100; i++)
             {
                 string result = (i % 3, i % 5) switch
@@ -38,8 +44,11 @@ namespace LearnCSharp.Excercises
             }
         }
 
-        public static void LoopRandom()
+        public static void LoopRandom(bool execute = false)
         {
+            if (!execute)
+                return;
+
             Random random = new();
             int current;
 
@@ -53,8 +62,11 @@ namespace LearnCSharp.Excercises
             } while (current != 7);
         }
 
-        public static void ChallengeGameBattle()
+        public static void ChallengeGameBattle(bool execute = false)
         {
+            if (!execute)
+                return;
+
             int hero = 10;
             int monster = 10;
 
@@ -78,8 +90,11 @@ namespace LearnCSharp.Excercises
             Helper.Output(hero > monster ? "Hero wins!" : "Monster wins!");
         }
 
-        public static void UserInput()
+        public static void UserInput(bool execute = false)
         {
+            if (!execute)
+                return;
+
             string? readResult;
             bool validEntry = false;
             Helper.Output("Enter a string containing at least three characters:");
@@ -101,8 +116,11 @@ namespace LearnCSharp.Excercises
             } while (validEntry == false);
         }
 
-        public static void ValidateIntegerInput()
+        public static void ValidateIntegerInput(bool execute = false)
         {
+            if (!execute)
+                return;
+
             string? readResult;
             string valueEntered = "";
             int numValue = 0;
@@ -140,8 +158,11 @@ namespace LearnCSharp.Excercises
             Helper.Output($"Your input value ({numValue}) has been accepted.");
         }
 
-        public static void ValidateStringInput()
+        public static void ValidateStringInput(bool execute = false)
         {
+            if (!execute)
+                return;
+
             string? readResult;
             string roleName = "";
             bool validEntry = false;
@@ -169,8 +190,11 @@ namespace LearnCSharp.Excercises
             Helper.Output($"Your input value ({roleName}) has been accepted.");
         }
 
-        public static void ProcessStringArrContent()
+        public static void ProcessStringArrContent(bool execute = false)
         {
+            if (!execute)
+                return;
+
             string[] myStrings = ["I like pizza. I like roast chicken. I like salad", "I like all three of the menu choices"];
             int stringsCount = myStrings.Length;
             for (int i = 0; i < stringsCount; i++)

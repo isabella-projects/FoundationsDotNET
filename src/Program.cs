@@ -37,8 +37,9 @@
 
             if (args.Contains("GuidedProjects"))
             {
-                GuidedProjects.JaggedArray(false);
-                GuidedProjects.AnimalSpecies(false);
+                GuidedProjects.JaggedArray();
+                GuidedProjects.AnimalSpecies();
+                GuidedProjects.AnimalSpeciesChallenge(true);
             }
         }
     }

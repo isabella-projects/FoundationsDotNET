@@ -3,8 +3,11 @@ namespace LearnCSharp.Excercises
     using Helpers;
     public class CodeBlocks
     {
-        public static void Flags()
+        public static void Flags(bool execute = false)
         {
+            if (!execute)
+                return;
+
             int[] numbers = [4, 8, 15, 16, 23, 42];
             int total = 0;
             bool found = false;

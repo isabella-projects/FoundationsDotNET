@@ -1,11 +1,12 @@
-using LearnCSharp.Helpers;
-
 namespace LearnCSharp.Excercises
 {
     public class GuidedProjects
     {
         public static void AnimalSpecies(bool execute = false)
         {
+            if (!execute)
+                return;
+
             // the ourAnimals array will store the following: 
             string animalSpecies = "";
             string animalID = "";
@@ -313,11 +314,12 @@ namespace LearnCSharp.Excercises
 
         public static void JaggedArray(bool execute = false)
         {
-            if (execute)
-            {
-                string[][] jaggedArray =
-                [
-                    ["one1", "two1", "three1", "four1", "five1", "six1"],
+            if (!execute)
+                return;
+
+            string[][] jaggedArray =
+            [
+                ["one1", "two1", "three1", "four1", "five1", "six1"],
                     ["one2", "two2", "three2", "four2", "five2", "six2"],
                     ["one3", "two3", "three3", "four3", "five3", "six3"],
                     ["one4", "two4", "three4", "four4", "five4", "six4"],
@@ -325,17 +327,17 @@ namespace LearnCSharp.Excercises
                     ["one6", "two6", "three6", "four6", "five6", "six6"],
                     ["one7", "two7", "three7", "four7", "five7", "six7"],
                     ["one8", "two8", "three8", "four8", "five8", "six8"]
-                ];
+            ];
 
-                foreach (string[] array in jaggedArray)
+            foreach (string[] array in jaggedArray)
+            {
+                foreach (string value in array)
                 {
-                    foreach (string value in array)
-                    {
-                        Console.WriteLine(value);
-                    }
-                    Console.WriteLine();
+                    Console.WriteLine(value);
                 }
+                Console.WriteLine();
             }
+
         }
     }
 }
