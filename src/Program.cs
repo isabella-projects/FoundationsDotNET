@@ -1,6 +1,7 @@
 ﻿namespace LearnCSharp
 {
     using Excercises;
+    using Helpers;
 
     public class Program
     {
@@ -18,7 +19,9 @@
             }
 
             if (args.Contains("Codeblocks"))
+            {
                 CodeBlocks.Flags();
+            }
 
             if (args.Contains("SwitchStatement"))
             {
@@ -45,7 +48,7 @@
                 GuidedProjects.AnimalSpecies();
                 GuidedProjects.AnimalSpeciesChallenge();
                 GuidedProjects.AnimalSpeciesChallenge2();
-                GuidedProjects.AnimalSpeciesChallenge3(true);
+                GuidedProjects.AnimalSpeciesChallenge3();
             }
 
             if (args.Contains("DataTypes"))
@@ -77,6 +80,20 @@
                 HelperMethods.IndexOfAny();
                 HelperMethods.Updating();
                 HelperMethods.ChallengeUpdateData();
+            }
+
+            if (args.Contains("Methods"))
+            {
+                Methods.DisplayRandomNumbers();
+                Methods.RemoveDuplicateMethods();
+                Methods.IsIPAddressValid();
+                Methods.ChallengeTellFortune();
+
+                ParamMethods.DisplayAdjustedTimes(6, -6, false);
+                ParamMethods.ChallengeDisplayEmail();
+
+                ReturnValMethods.ShowDiscountedPrice();
+                ReturnValMethods.ReverseWords();
             }
         }
     }
