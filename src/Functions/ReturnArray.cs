@@ -1,3 +1,5 @@
+#if !RETURN_ARRAY_METHOD
+
 int target = 80;
 int[] coins = new int[] { 5, 5, 50, 25, 25, 10, 5 };
 int[,] result = TwoCoins(coins, target);
@@ -42,3 +44,5 @@ int[,] TwoCoins(int[] coins, int target)
     }
     return (count == 0) ? new int[0, 0] : result;
 }
+
+#endif
