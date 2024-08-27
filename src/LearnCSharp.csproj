@@ -8,7 +8,7 @@
 
         <!-- Conditional compilation of some functions -->
         <!-- Some of the functions I don't want to be compiled -->
-        <DefineConstants>RETURN_ARRAY_METHOD;DICE_MINI_GAME;</DefineConstants>
+        <DefineConstants>RETURN_ARRAY_METHOD;DICE_MINI_GAME;PETTING_ZOO;MINI_GAME</DefineConstants>
     </PropertyGroup>
 
 </Project>
